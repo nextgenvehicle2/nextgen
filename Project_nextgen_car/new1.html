@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page - NextGen Connected Vehicle Platform</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        label, input {
+            display: block;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 20px;
+        }
+        .forgot-link {
+            margin-top: 10px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NextGen Connected Vehicle Platform</h1>
+        
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            
+            <button type="submit">Login</button>
+            
+            <div class="forgot-link">
+                <a href="#" id="forgotLink">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        // Handle form submission
+        document.getElementById("loginForm").addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents default form submission
+            
+            // Get the entered username and password
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            // TODO: Implement your login logic here
+            
+            // Redirect to the appropriate page after successful login
+            window.location.href = "dashboard.html";
+        });
+        
+        // Handle forgot password link click
+        document.getElementById("forgotLink").addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents default link behavior
+            
+            // TODO: Implement your "Forgot Password" functionality here
+            
+            // Redirect to the password recovery page
+            window.location.href = "password_recovery.html";
+        });
+    </script>
+</body>
+</html>
